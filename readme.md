@@ -117,12 +117,12 @@ The extension follows a simple message-based architecture:
 ┌─────────────────────┐
 │       ai.js         │
 │                     │
-│ Mistral API request │
+│ GROQ    API request │
 └──────────┬──────────┘
            │
            ▼
 ┌─────────────────────┐
-│     Mistral AI      │
+│       GROQ  AI      │
 │                     │
 │ Answer + Explanation│
 └──────────┬──────────┘
@@ -175,8 +175,8 @@ AI-MCQ-Solver/
 
 ### AI
 
-* Mistral AI
-* `mistral-small-latest`
+* GROQ AI
+* 'openai/gpt-oss-120b',
 * REST API
 
 ---
@@ -269,7 +269,7 @@ ai.js
 Add your Mistral API key:
 
 ```javascript
-const API_KEY = "YOUR_MISTRAL_API_KEY";
+const API_KEY = "YOUR_GROQ_API_KEY";
 ```
 
 > ⚠️ **Security:** This project is designed as a personal/local Chrome extension. API keys embedded directly in a browser extension can be extracted by users with access to the extension files. Do not commit a real API key to GitHub.
