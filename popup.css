@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 360px;
+    min-height: 320px;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+
+    background: linear-gradient(145deg, #f8fafc, #eef2ff);
+    color: #0f172a;
+}
+
+/* Main container */
+
+.container {
+    width: 100%;
+    padding: 22px;
+    text-align: center;
+}
+
+/* Logo */
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.logo {
+    width: 68px;
+    height: 68px;
+    display: block;
+    border-radius: 17px;
+    object-fit: cover;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.18),
+        0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+
+h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    color: #0f172a;
+}
+
+/* Subtitle */
+
+.subtitle {
+    margin: 8px 0 20px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Solve button */
+
+.summarize {
+    width: 100%;
+    padding: 12px 16px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 14px rgba(37, 99, 235, 0.25);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        opacity 0.15s ease;
+}
+
+.summarize:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, 0.32);
+}
+
+.summarize:active {
+    transform: translateY(1px);
+}
+
+.summarize:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Status */
+
+.status {
+    margin: 12px 0 0;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    color: #64748b;
+}
+
+/* Loading spinner */
+
+.loader {
+    width: 25px;
+    height: 25px;
+
+    margin: 16px auto;
+
+    border: 3px solid #dbeafe;
+    border-top: 3px solid #2563eb;
+
+    border-radius: 50%;
+
+    animation: spin 0.75s linear infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Output card */
+
+.output {
+    margin-top: 20px;
+
+    padding: 16px;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+/* Answer heading */
+
+.output h3 {
+    margin: 0 0 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #2563eb;
+}
+
+/* AI response */
+
+.text {
+    margin: 0;
+
+    white-space: pre-wrap;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: #334155;
+}
+
+/* Scroll if AI gives a long explanation */
+
+.output {
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+/* Custom scrollbar */
+
+.output::-webkit-scrollbar {
+    width: 5px;
+}
+
+.output::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.output::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.output::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Loading animation */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
