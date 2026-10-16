@@ -1,6 +1,6 @@
 # 🧠 AI MCQ Solver — Chrome Extension
 
-An AI-powered Chrome Extension that instantly solves **Multiple Choice Questions (MCQs)** directly from webpages using **Mistral AI**.
+An AI-powered Chrome Extension that instantly solves **Multiple Choice Questions (MCQs)** directly from webpages using **GROQ AI**.
 
 Simply highlight a question with its four options, click **Solve Question**, and receive the correct option along with a concise explanation.
 
@@ -8,7 +8,7 @@ Simply highlight a question with its four options, click **Solve Question**, and
 
 ## ✨ Features
 
-* 🤖 AI-powered MCQ solving with Mistral AI
+* 🤖 AI-powered MCQ solving with GROQ AI
 * 📄 Solve questions directly from any supported webpage
 * ⚡ Fast AI responses
 * 🧠 Returns the correct option with an explanation
@@ -148,7 +148,7 @@ AI-MCQ-Solver/
 ├── popup.js            # Popup interaction and messaging
 ├── content.js          # Retrieves selected webpage text
 ├── background.js       # Service worker and message handling
-├── ai.js               # Mistral AI integration
+├── ai.js               # GROQ AI integration
 ├── icons/
 │   └── logo.png
 │
@@ -204,9 +204,9 @@ The popup sends a message to the content script requesting the selected text.
 
 The selected MCQ is sent to the background service worker.
 
-### 4. Call Mistral AI
+### 4. Call GROQ AI
 
-The service worker sends the question to Mistral using the configured model.
+The service worker sends the question to GROQ using the configured model.
 
 ### 5. Receive the Result
 
@@ -258,7 +258,7 @@ Select the cloned project directory.
 
 ---
 
-## 🔑 Configure Mistral API
+## 🔑 Configure GROQ API
 
 Open:
 
@@ -266,7 +266,7 @@ Open:
 ai.js
 ```
 
-Add your Mistral API key:
+Add your GROQ API key:
 
 ```javascript
 const API_KEY = "YOUR_GROQ_API_KEY";
@@ -363,7 +363,7 @@ The UI also disables the **Solve Question** button while a request is being proc
 
 ```text
 Core MCQ solving       ✅ Complete
-Mistral integration    ✅ Complete
+GROQ.   integration    ✅ Complete
 Chrome messaging       ✅ Complete
 Loading state          ✅ Complete
 Error handling         ✅ Complete
@@ -377,7 +377,7 @@ Performance testing    ✅ Complete
 ```text
 Version: 1.0
 Status:  Stable / Personal Use
-Model:   mistral-small-latest
+Model:   openai/gpt-oss-120b
 Platform: Google Chrome
 ```
 
